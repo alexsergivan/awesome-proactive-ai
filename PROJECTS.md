@@ -4,7 +4,7 @@
 
 This guide covers implemented resources alongside research papers. Entries are grouped by **activation mechanism and role**, so a scheduler, a trained intervention policy, a product, and a memory library can be compared without conflating their evidence.
 
-**Check dates:** baseline entries were reviewed on 2026-10-04; WakeGate, Meta Muse, Manus Cue, and Grok Bot were checked on **2026-10-31**; Claude Duet and Mistlabs Ambi on **2026-11-01**. Sources are official repositories and documentation. Product capabilities are vendor-described, not independently benchmarked; source inspection is not an installation test. An older entry's date is not refreshed by this targeted update.
+**Check dates:** baseline entries were reviewed on 2026-10-04; WakeGate, Meta Muse, Manus Cue, and Grok Bot were checked on **2026-10-31**; Claude Duet and Mistlabs Ambi on **2026-11-01**; kwant on **2026-11-18**. Sources are official repositories and documentation. Product capabilities are vendor-described, not independently benchmarked; source inspection is not an installation test. An older entry's date is not refreshed by this targeted update.
 
 ## Persistent Runtimes and Activation SDKs
 
@@ -14,6 +14,7 @@ This guide covers implemented resources alongside research papers. Entries are g
 | **Hermes Agent** | Agent harness with memory/skills and scheduled tasks delivered through messaging channels. | Source, CLI/gateway, and cron documentation. | Include as scheduled activation: a user-defined recurring job does not by itself demonstrate discovery of an unstated need. | [Repository](https://github.com/NousResearch/hermes-agent) · [Scheduled tasks](https://hermes-agent.nousresearch.com/docs/user-guide/features/cron) |
 | **Letta Code** | Stateful agent harness supporting always-on operation, persistent memory, and self-managed schedules. | Source, CLI, and scheduling/permissions docs. | Memory persistence and scheduled execution are distinct from calibrated intervention timing. | [Repository](https://github.com/letta-ai/letta-code) · [Schedules](https://docs.letta.com/configuration/schedules) |
 | **Proactivity SDK** | Framework adapter layer with durable goals, cross-wake state, model-selected cadence, and event-driven waking. | TypeScript SDK, adapters, examples, and governance primitives. | Inspect cadence, goal continuity, idempotency, and action caps. These controls describe orchestration, not a trained streaming model or benchmark result. | [Repository](https://github.com/refixai/proactivity-sdk) |
+| **kwant** | Self-hosted team of AI bots in one binary (Rust + React). Routines run bots on a schedule; bots hand work to each other with @mentions and keep working while the user is away, and a chat that needs the user's answer is surfaced as "Waiting for you". | Open-source (AGPL-3.0) runtime with Mac and Linux builds; works with local models (e.g. Ollama) and the user's existing AI accounts. Checked 2026-11-18. | Activation comes from user-configured routines (schedules) and @mention handoffs between bots; approvals gate work before it is accepted. Configured routines are not proof of unsolicited need discovery; no independent proactive benchmark verified. | [Repository](https://github.com/alexsergivan/kwant) · [Features](https://kwant.si/features) · [Quickstart](https://kwant.si/docs/quickstart) |
 
 ## Ambient and Personal Assistants
 
